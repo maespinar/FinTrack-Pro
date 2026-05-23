@@ -13,7 +13,7 @@ def imprimir_cabecera():
     
 def iniciar_sistema():
     portafolio = PortafolioAuditoria()
-    while(True):
+    while True:
         imprimir_cabecera()
         opcion = input("\nSeleccione una opcion (1-5): ").strip()    
         match opcion:
