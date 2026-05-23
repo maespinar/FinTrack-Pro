@@ -1,4 +1,4 @@
-from .activos import Activo, TickerDuplicadoError
+from .activos import Activo, ActivoInternacional, TickerDuplicadoError
 from .portafolio import PortafolioAuditoria
 
-__all__ = ["Activo", "TickerDuplicadoError", "PortafolioAuditoria"]
+__all__ = ["Activo", "ActivoInternacional", "TickerDuplicadoError", "PortafolioAuditoria"]

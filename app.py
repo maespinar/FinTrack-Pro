@@ -1,5 +1,5 @@
 import sys
-#from finanzas import Activo, PortafolioAuditoria, TickerDuplicadoError
+from finanzas import Activo, ActivoInternacional, PortafolioAuditoria, TickerDuplicadoError
 
 def imprimir_cabecera():
     print("\n" + "=" * 50)
@@ -19,6 +19,21 @@ def iniciar_sistema():
         match opcion:
             case "1":
                 print("\n[+] Modulo de registro iniciado (En construccion...)")
+                try:
+                    ticker = input("Codigo de Ticker (Ej: AAPL): ").strip()
+                    nombre = input("Nombre de la empresa: ").strip()
+                    monto = float(input("Monto invertido original: ").strip())
+                    divisa = input("Divisa de origen (Ej: EUR): ").strip()
+                    tasa = float(input("Tasa de cambio a USD: ").strip())
+                    nuevo_activo = ActivoInternacional(ticker, nombre, monto, divisa, tasa)
+                    portafolio.añadir_activo(nuevo_activo)
+                    print(f"\n[✓] Exito! El activo {nuevo_activo.codigo_ticker} ha sido auditado y registrado.")
+                    
+                except ValueError as e:
+                    print(f"\n[!] Error de valor: Ingrese valores numerios positivos validos.")
+                    print(f"Detalle de error: {e}")
+                except TickerDuplicadoError as e:
+                    print(f"\n[!] Error de registro: {e}")
                 
             case "2":
                 print("\n[+] Generando reporte del portafolio (En construcción...)")
