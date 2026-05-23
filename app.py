@@ -1,7 +1,7 @@
 import sys
 #from finanzas import Activo, PortafolioAuditoria, TickerDuplicadoError
 
-def imprimirCabecera():
+def imprimir_cabecera():
     print("\n" + "=" * 50)
     print("     FINTRACK PRO v1.0 - AUDITORÍA IN SITU")
     print("=" * 50)
@@ -11,10 +11,10 @@ def imprimirCabecera():
     print("4. Calcular Valor Consolidado (USD)")
     print("5. Salir")
     
-def iniciarSistema():
-    
+def iniciar_sistema():
+    portafolio = PortafolioAuditoria()
     while(True):
-        imprimirCabecera()
+        imprimir_cabecera()
         opcion = input("\nSeleccione una opcion (1-5): ").strip()    
         match opcion:
             case "1":
@@ -22,7 +22,7 @@ def iniciarSistema():
                 
             case "2":
                 print("\n[+] Generando reporte del portafolio (En construcción...)")
-                
+                portafolio.mostrarReporte()
             case "3":
                 print("\n[+] Iniciando filtro por divisa (En construcción...)")
                 
@@ -36,4 +36,4 @@ def iniciarSistema():
                 print("\n[x] Error de entrada: Por favor, seleccione una opcion valida del 1 al 5.")
     
 if(__name__ == "__main__"):
-    iniciarSistema()
+    iniciar_sistema()
