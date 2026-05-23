@@ -37,7 +37,7 @@ def iniciar_sistema():
                 
             case "2":
                 print("\n[+] Generando reporte del portafolio (En construcción...)")
-                portafolio.mostrarReporte()
+                portafolio.mostrar_reporte()
             case "3":
                 print("\n[+] Iniciando filtro por divisa (En construcción...)")
                 
