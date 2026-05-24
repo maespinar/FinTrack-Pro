@@ -57,6 +57,6 @@ Sigue estos pasos para desplegar el proyecto en tu entorno local de forma aislad
 
 Integración entre Diccionarios y Objetos: Transformación dinámica de instancias de clase a diccionarios en tiempo de ejecución para la generación de reportes matriciales.
 F-Strings Avanzados: Formateo de datos numéricos flotantes a estándares monetarios internacionales ($1,500.00).
-Control de Flujo Optimizado: Uso de la estructura match-case de Python 3.10+ para un enrutamiento de menú rápido y legible.
+Control de Flujo Optimizado: Uso de la estructura match-case de Python 3.14.5+ para un enrutamiento de menú rápido y legible.
 
 Desarrollado con 💻 y buenas prácticas de Clean Code.
