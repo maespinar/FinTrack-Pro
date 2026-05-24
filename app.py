@@ -23,7 +23,7 @@ def iniciar_sistema():
                     ticker = input("Codigo de Ticker (Ej: AAPL): ").strip()
                     nombre = input("Nombre de la empresa: ").strip().title()
                     monto = float(input("Monto invertido original: ").strip())
-                    divisa = input("Divisa de origen (Ej: EUR): ").strip()
+                    divisa = str(input("Divisa de origen (Ej: EUR): ").strip())
                     tasa = float(input("Tasa de cambio a USD: ").strip())
                     nuevo_activo = ActivoInternacional(ticker, nombre, monto, divisa, tasa)
                     portafolio.añadir_activo(nuevo_activo)
@@ -34,13 +34,16 @@ def iniciar_sistema():
                     print(f"Detalle de error: {e}")
                 except TickerDuplicadoError as e:
                     print(f"\n[!] Error de registro: {e}")
-                
             case "2":
                 print("\n[+] Generando reporte del portafolio (En construcción...)")
-                portafolio.mostrar_reporte()
+                portafolio.mostrar_reporte(portafolio.activos_dict)
             case "3":
                 print("\n[+] Iniciando filtro por divisa (En construcción...)")
-                
+                try:
+                    divisa_a_filtrar = str(input("Divisa a filtrar: ").strip().upper())
+                    portafolio.filtrar_por_divisa(divisa_a_filtrar)
+                except:
+                    print("\n[!] Error al ingresar la divisa.")
             case "4":
                 print("\n[+] Calculando consolidado en USD (En construcción...)")
                 
