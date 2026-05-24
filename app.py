@@ -21,7 +21,7 @@ def iniciar_sistema():
                 print("\n[+] Modulo de registro iniciado (En construccion...)")
                 try:
                     ticker = input("Codigo de Ticker (Ej: AAPL): ").strip()
-                    nombre = input("Nombre de la empresa: ").strip()
+                    nombre = input("Nombre de la empresa: ").strip().title()
                     monto = float(input("Monto invertido original: ").strip())
                     divisa = input("Divisa de origen (Ej: EUR): ").strip()
                     tasa = float(input("Tasa de cambio a USD: ").strip())

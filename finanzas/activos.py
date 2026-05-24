@@ -5,7 +5,7 @@ class Activo:
     def __init__(self, codigo_ticker, nombre, monto_invertido):
         self.codigo_ticker = codigo_ticker.upper()
         self.nombre = nombre
-        self.__monto_invertido = monto_invertido
+        self.monto_invertido = monto_invertido
        
     @property   #getter
     def monto_invertido(self):
@@ -21,7 +21,7 @@ class ActivoInternacional(Activo):
     def __init__(self, codigo_ticker, nombre, monto_invertido, divisa, tasa_cambio_usd):
         super().__init__(codigo_ticker, nombre, monto_invertido)
         self.divisa = divisa.upper()
-        self.__tasa_cambio_usd = tasa_cambio_usd
+        self.tasa_cambio_usd = tasa_cambio_usd
     
     @property   #getter    
     def tasa_cambio_usd(self):

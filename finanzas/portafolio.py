@@ -11,10 +11,17 @@ class PortafolioAuditoria:
         self.numero_activos =  3
     
     def añadir_activo(self, activo):
-        for i in self.numero_activos:
-            if activo.codigo_ticker in self.activos_dict[i]["Ticker"]:
-                raise TickerDuplicadoError(f"El activo con ticker {activo.codigo_ticker} ya esta registrado")
-        self.activos_dic.append(activo)
+        for i in range(self.numero_activos):
+            if activo.codigo_ticker == self.activos_dict[i]["Ticker"]:
+                raise TickerDuplicadoError(f"El activo con ticker {activo.codigo_ticker} ya esta registrado.")
+        nuevo_dict_activo = {
+            "Ticker": activo.codigo_ticker,
+            "Empresa": activo.nombre,
+            "Inversión": f"${activo.monto_invertido:,.2f}",
+            "Divisa": activo.divisa
+        }
+        self.activos_dict.append(nuevo_dict_activo)
+        self.numero_activos += 1
     
     def filtrar_por_divisa(self, divisa):
         lista_activos = []
