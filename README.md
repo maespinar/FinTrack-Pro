@@ -1,6 +1,6 @@
 # FinTrack Pro - Sistema de Auditoría Financiera
 
-![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Python Version](https://img.shields.io/badge/Python-3.14.5%2B-blue)
 ![Architecture](https://img.shields.io/badge/Architecture-Modular-success)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
