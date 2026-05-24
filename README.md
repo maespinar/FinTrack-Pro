@@ -30,19 +30,23 @@ fintrack_pro/
 # Instalación y Configuración:
 Sigue estos pasos para desplegar el proyecto en tu entorno local de forma aislada.
 
-1. Clonar el repositorio (Bash)
-    git clone [https://github.com/TU_USUARIO/fintrack_pro.git](https://github.com/TU_USUARIO/fintrack_pro.git)
-    cd fintrack_pro
-2. Crear y activar el entorno virtual
-     Windows
+1. Clonar el repositorio
+   Bash
+   git clone [https://github.com/TU_USUARIO/fintrack_pro.git](https://github.com/TU_USUARIO/fintrack_pro.git)
+   cd fintrack_pro
+3. Crear y activar el entorno virtual
+    Bash
+    # Windows
     python -m venv venv
     venv\Scripts\activate
-     Mac/Linux
+    # Mac/Linux
     python -m venv venv
     source venv/bin/activate
-3. Instalar dependencias
+5. Instalar dependencias
+    Bash
     pip install -r requirements.txt
-4. Ejecutar el sistema
+7. Ejecutar el sistema
+    Bash
     python app.py
 
 # Conceptos Técnicos Aplicados
