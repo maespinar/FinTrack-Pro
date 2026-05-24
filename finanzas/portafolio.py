@@ -36,14 +36,19 @@ class PortafolioAuditoria:
     
     def calcular_valor_total_usd(self):
         lista_consolidada = []
+        suma_total = 0.0
         for activo_dict in self.activos_dict:
+            suma_total += activo_dict["Consolidado_Num"]
             activo_consolidado = {
                 "Ticker": activo_dict["Ticker"],
                 "Empresa": activo_dict["Empresa"],
-                "Consolidado USD": f"${activo_dict["Consolidado_Num"]:,.2f}"
+                "Consolidado USD": f"${activo_dict['Consolidado_Num']:,.2f}"
             }
             lista_consolidada.append(activo_consolidado)
         self.mostrar_reporte(lista_consolidada)
+        print("=" * 50)
+        print(f"        GRAN TOTAL AUDITADO: ${suma_total:,.2f} USD")
+        print("=" * 50)
     
     def mostrar_reporte(self, lista_a_mostrar):
         if self.cantidad_activos == 0:
